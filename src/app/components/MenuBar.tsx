@@ -1,5 +1,9 @@
 function MenuBar() {
-  return <div>MenuBar</div>;
+  return (
+    <div id="menu-bar" className="border fixed w-full">
+      MenuBar
+    </div>
+  );
 }
 
 export default MenuBar;
