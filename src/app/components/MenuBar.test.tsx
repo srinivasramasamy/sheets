@@ -10,4 +10,13 @@ describe("Menu Bar", () => {
     // Then
     expect(container.textContent).toContain("MenuBar");
   });
+
+  it("should be fixed", () => {
+    // Given
+    const { container } = render(<MenuBar />);
+    const menuBar = container.querySelector("#menu-bar");
+
+    // Then
+    expect(menuBar?.className).toContain("fixed");
+  });
 });
