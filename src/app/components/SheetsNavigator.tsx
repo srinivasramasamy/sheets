@@ -1,6 +1,6 @@
 function SheetsNavigator() {
   return (
-    <div id="sheets-navigator" className="fixed bottom-0 border w-full">
+    <div id="sheets-navigator" className="border">
       SheetsNavigator
     </div>
   );
