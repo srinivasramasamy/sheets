@@ -24,4 +24,11 @@ test.describe("Sheets Home", () => {
     // Then
     await expect(sheetsNavigator).toBeVisible();
   });
+  test("should have sheets container visible", async ({ page }) => {
+    // Given
+    const sheetsContainer: Locator = page.locator("#sheets-container");
+
+    // Then
+    await expect(sheetsContainer).toBeVisible();
+  });
 });

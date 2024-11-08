@@ -1,6 +1,6 @@
 function MenuBar() {
   return (
-    <div id="menu-bar" className="border fixed w-full">
+    <div id="menu-bar" className="border">
       MenuBar
     </div>
   );
