@@ -4,7 +4,7 @@ import SheetsNavigator from "./SheetsNavigator";
 
 function SheetsHome() {
   return (
-    <div className="flex-col">
+    <div className="flex flex-col justify-between h-screen">
       <MenuBar />
       <SheetsContainer />
       <SheetsNavigator />
