@@ -1,6 +1,6 @@
 function SheetsContainer() {
   return (
-    <div id="sheets-container" className="border">
+    <div id="sheets-container" className="border flex-grow">
       SheetsContainer
     </div>
   );
