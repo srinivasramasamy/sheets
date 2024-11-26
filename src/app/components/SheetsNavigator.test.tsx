@@ -8,6 +8,14 @@ describe("Sheets Navigator", () => {
     const { container } = render(<SheetsNavigator />);
 
     // Then
-    expect(container.textContent).toContain("SheetsNavigator");
+    expect(container.querySelector("#sheets-navigator")).toBeTruthy();
+  });
+
+  it("should have add sheets button", () => {
+    // Given
+    const { container } = render(<SheetsNavigator />);
+
+    // Then
+    expect(container.querySelector("#add-sheets")).toBeTruthy();
   });
 });

@@ -1,7 +1,9 @@
+import { Plus } from "react-feather";
+
 function SheetsNavigator() {
   return (
     <div id="sheets-navigator" className="border">
-      SheetsNavigator
+      <Plus id="add-sheets" />
     </div>
   );
 }
