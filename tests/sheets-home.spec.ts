@@ -31,4 +31,12 @@ test.describe("Sheets Home", () => {
     // Then
     await expect(sheetsContainer).toBeVisible();
   });
+
+  test("should have add sheets button visible", async ({ page }) => {
+    // Given
+    const addSheets: Locator = page.locator("#add-sheets");
+
+    // Then
+    await expect(addSheets).toBeVisible();
+  });
 });
