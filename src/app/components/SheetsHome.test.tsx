@@ -16,6 +16,6 @@ describe("Sheets Home", () => {
     const { container } = render(<SheetsHome />);
 
     // Then
-    expect(container.textContent).toContain("SheetsNavigator");
+    expect(container.querySelector("#sheets-navigator")).toBeTruthy();
   });
 });
