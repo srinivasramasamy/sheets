@@ -18,4 +18,13 @@ describe("Sheets Navigator", () => {
     // Then
     expect(container.querySelector("#add-sheets")).toBeTruthy();
   });
+
+  it("should have default tab", () => {
+    // Given
+    const defaultTabName: string = "Sheet1";
+    const { container } = render(<SheetsNavigator />);
+
+    // Then
+    expect(container.textContent).toContain(defaultTabName);
+  });
 });

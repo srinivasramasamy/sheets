@@ -1,6 +1,6 @@
 import MenuBar from "./MenuBar";
 import SheetsContainer from "./SheetsContainer";
-import SheetsNavigator from "./SheetsNavigator";
+import SheetsNavigator from "./sheets-navigator/SheetsNavigator";
 
 function SheetsHome() {
   return (

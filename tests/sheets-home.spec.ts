@@ -39,4 +39,15 @@ test.describe("Sheets Home", () => {
     // Then
     await expect(addSheets).toBeVisible();
   });
+
+  test("should have default tab", async ({ page }) => {
+    // Given
+    const defaultTabName: string = "Sheet1";
+
+    // When
+    const defaultTab: Locator = page.getByText(defaultTabName);
+
+    // Then
+    await expect(defaultTab).toBeVisible();
+  });
 });
