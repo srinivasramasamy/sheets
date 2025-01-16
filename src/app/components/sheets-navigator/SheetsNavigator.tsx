@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import Tab from "./Tab";
 
 function SheetsNavigator() {
-  const sheets: Sheet[] = useSelector((state) => state.sheet.sheets);
+  const sheets: Sheet[] = useSelector((state: any) => state.sheet.sheets);
 
   return (
     <div id="sheets-navigator" className="border flex">
