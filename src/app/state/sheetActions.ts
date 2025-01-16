@@ -5,3 +5,5 @@ export const addSheet = () => {
     type: ADD_SHEET,
   };
 };
+
+export type ISheetAction = { type: string };
