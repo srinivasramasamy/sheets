@@ -1,6 +1,6 @@
 import store from "@/app/state/store";
 import "@testing-library/jest-dom";
-import { render } from "@testing-library/react";
+import { act, render } from "@testing-library/react";
 import { Provider } from "react-redux";
 import SheetsNavigator from "./SheetsNavigator";
 
@@ -40,5 +40,23 @@ describe("Sheets Navigator", () => {
 
     // Then
     expect(container.textContent).toContain(defaultTabName);
+  });
+
+  it("should add new sheet tab", () => {
+    // Given
+    const { container } = render(
+      <Provider store={store}>
+        <SheetsNavigator />
+      </Provider>
+    );
+    const addSheetButton = container.querySelector("#add-sheets");
+
+    // When
+    act(() => {
+      addSheetButton?.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+
+    // Then
+    expect(container.textContent).toContain("Sheet2");
   });
 });
