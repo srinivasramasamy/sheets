@@ -14,7 +14,7 @@ function SheetsNavigator() {
 
   return (
     <div id="sheets-navigator" className="border flex">
-      <Plus id="add-sheets" onClick={(e) => dispatch(addSheet())} />
+      <Plus id="add-sheets" onClick={() => dispatch(addSheet())} />
       {sheets.map((sheet) => (
         <Tab key={sheet.name} name={sheet.name} />
       ))}
