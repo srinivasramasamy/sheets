@@ -2,7 +2,7 @@ import Sheet from "../types/Sheet";
 import { ISheetAction } from "./sheetActions";
 import { ADD_SHEET } from "./sheetActionTypes";
 
-const defaultSheet = new Sheet("Sheet1");
+const defaultSheet: Sheet = new Sheet("Sheet1");
 const initialState = {
   sheets: [defaultSheet],
 };
