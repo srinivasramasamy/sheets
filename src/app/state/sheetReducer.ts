@@ -2,7 +2,7 @@ import Sheet from "../types/Sheet";
 import { ISheetAction } from "./sheetActions";
 import { ADD_SHEET } from "./sheetActionTypes";
 
-const defaultSheet: Sheet = new Sheet("Sheet1");
+const defaultSheet = new Sheet("Sheet1").tojson();
 const initialState = {
   sheets: [defaultSheet],
 };
@@ -12,7 +12,10 @@ const taskReducer = (state = initialState, action: ISheetAction) => {
     case ADD_SHEET:
       return {
         ...state,
-        sheets: [...state.sheets, new Sheet(`Sheet${state.sheets.length + 1}`)],
+        sheets: [
+          ...state.sheets,
+          new Sheet(`Sheet${state.sheets.length + 1}`).tojson(),
+        ],
       };
 
     default:

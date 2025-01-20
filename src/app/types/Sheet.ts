@@ -4,4 +4,10 @@ export default class Sheet {
   constructor(name: string) {
     this.name = name;
   }
+
+  tojson() {
+    return {
+      name: this.name,
+    };
+  }
 }
