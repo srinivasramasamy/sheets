@@ -3,7 +3,7 @@ interface IProps {
 }
 
 function Tab({ name }: IProps) {
-  return <div>{name}</div>;
+  return <div className="p-2 border cursor-pointer">{name}</div>;
 }
 
 export default Tab;

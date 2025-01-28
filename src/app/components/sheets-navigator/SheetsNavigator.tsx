@@ -13,8 +13,10 @@ function SheetsNavigator() {
   );
 
   return (
-    <div id="sheets-navigator" className="border flex">
-      <Plus id="add-sheets" onClick={() => dispatch(addSheet())} />
+    <div id="sheets-navigator" className="border flex items-center px-2">
+      <div className="p-2">
+        <Plus id="add-sheets" onClick={() => dispatch(addSheet())} />
+      </div>
       {sheets.map((sheet) => (
         <Tab key={sheet.name} name={sheet.name} />
       ))}
