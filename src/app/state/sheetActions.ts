@@ -1,4 +1,4 @@
-import { ADD_SHEET } from "./sheetActionTypes";
+import { ADD_SHEET, SELECT_SHEET } from "./sheetActionTypes";
 
 export const addSheet = () => {
   return {
@@ -6,4 +6,11 @@ export const addSheet = () => {
   };
 };
 
-export type ISheetAction = { type: string };
+export const selectSheet = (selectedSheetIndex: number) => {
+  return {
+    type: SELECT_SHEET,
+    payload: selectedSheetIndex,
+  };
+};
+
+export type ISheetAction = { type: string; payload?: any };
