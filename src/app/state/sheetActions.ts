@@ -6,6 +6,8 @@ export const addSheet = () => {
   };
 };
 
+export type IAddSheetAction = { type: string; payload: number };
+
 export const selectSheet = (selectedSheetIndex: number) => {
   return {
     type: SELECT_SHEET,
@@ -13,4 +15,4 @@ export const selectSheet = (selectedSheetIndex: number) => {
   };
 };
 
-export type ISheetAction = { type: string; payload?: any };
+export type ISelectSheetAction = { type: string; payload: number };

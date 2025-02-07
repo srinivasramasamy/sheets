@@ -1,5 +1,6 @@
 import Sheet from "../types/Sheet";
-import { ISheetAction } from "./sheetActions";
+import { IAddSheetAction, ISelectSheetAction } from "./sheetActions";
+
 import { ADD_SHEET, SELECT_SHEET } from "./sheetActionTypes";
 
 const defaultSheet: Sheet = new Sheet("Sheet1");
@@ -8,7 +9,10 @@ const initialState = {
   sheets: [defaultSheet],
 };
 
-const taskReducer = (state = initialState, action: ISheetAction) => {
+const taskReducer = (
+  state = initialState,
+  action: ISelectSheetAction | IAddSheetAction
+) => {
   switch (action.type) {
     case ADD_SHEET:
       return {
