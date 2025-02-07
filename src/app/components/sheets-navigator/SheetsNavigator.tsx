@@ -1,5 +1,5 @@
 "use client";
-import { addSheet } from "@/app/state/sheetActions";
+import { addSheet, selectSheet } from "@/app/state/sheetActions";
 import { IRootState } from "@/app/state/store";
 import Sheet from "@/app/types/Sheet";
 import { Plus } from "react-feather";
@@ -17,8 +17,12 @@ function SheetsNavigator() {
       <div className="p-2">
         <Plus id="add-sheets" onClick={() => dispatch(addSheet())} />
       </div>
-      {sheets.map((sheet) => (
-        <Tab key={sheet.name} name={sheet.name} />
+      {sheets.map((sheet: Sheet, index: number) => (
+        <Tab
+          key={sheet.name}
+          name={sheet.name}
+          onClick={() => dispatch(selectSheet(index))}
+        />
       ))}
     </div>
   );
