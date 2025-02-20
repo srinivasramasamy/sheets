@@ -45,7 +45,7 @@ test.describe("Sheets Home", () => {
     const defaultTabName: string = "Sheet1";
 
     // When
-    const defaultTab: Locator = page.getByText(defaultTabName);
+    const defaultTab: Locator = page.locator("#" + defaultTabName + "-tab");
 
     // Then
     await expect(defaultTab).toBeVisible();

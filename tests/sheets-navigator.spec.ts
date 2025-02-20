@@ -16,4 +16,21 @@ test.describe("Sheets Navigator", () => {
     // Then
     expect(await page.getByText(newTabName).isVisible()).toBeTruthy();
   });
+
+  test("should change sheets container when sheet tabs are clicked", async ({
+    page,
+  }) => {
+    // Given
+    const addSheets: Locator = page.locator("#add-sheets");
+    await addSheets.click();
+    const sheet2Tab: Locator = page.locator("text=Sheet2");
+
+    // When
+    await sheet2Tab.click();
+
+    // Then
+    expect(await page.locator("#sheets-container").textContent()).toContain(
+      "Sheet2"
+    );
+  });
 });
