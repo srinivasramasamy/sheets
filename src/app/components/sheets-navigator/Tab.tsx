@@ -5,7 +5,11 @@ interface IProps {
 
 function Tab({ name, onClick }: IProps) {
   return (
-    <div className="p-2 border cursor-pointer" onClick={onClick}>
+    <div
+      id={name + "-tab"}
+      className="p-2 border cursor-pointer"
+      onClick={onClick}
+    >
       {name}
     </div>
   );
