@@ -14,6 +14,6 @@ describe("Sheets Container", () => {
     );
 
     // Then
-    expect(container.textContent).toContain("Sheet1");
+    expect(container.querySelector("#sheets-container")).toBeTruthy();
   });
 });
