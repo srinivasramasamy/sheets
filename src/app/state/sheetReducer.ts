@@ -3,7 +3,7 @@ import { IAddSheetAction, ISelectSheetAction } from "./sheetActions";
 
 import { ADD_SHEET, SELECT_SHEET } from "./sheetActionTypes";
 
-const defaultSheet: Sheet = new Sheet("Sheet1");
+const defaultSheet: Sheet = new Sheet("Sheet1", 100, 26);
 const initialState = {
   selectedSheetIndex: 0,
   sheets: [defaultSheet],
@@ -17,7 +17,10 @@ const taskReducer = (
     case ADD_SHEET:
       return {
         ...state,
-        sheets: [...state.sheets, new Sheet(`Sheet${state.sheets.length + 1}`)],
+        sheets: [
+          ...state.sheets,
+          new Sheet(`Sheet${state.sheets.length + 1}`, 100, 26),
+        ],
       };
 
     case SELECT_SHEET:
