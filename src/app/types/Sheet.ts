@@ -4,8 +4,8 @@ export default class Sheet {
   name: string;
   rows: Row[];
 
-  constructor(name: string, rows: Row[] = []) {
+  constructor(name: string, noOfRows: number, noOfCells: number) {
     this.name = name;
-    this.rows = rows;
+    this.rows = new Array(noOfRows).fill(null).map(() => new Row(noOfCells));
   }
 }
