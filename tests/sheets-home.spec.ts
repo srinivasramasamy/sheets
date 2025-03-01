@@ -26,7 +26,7 @@ test.describe("Sheets Home", () => {
   });
   test("should have sheets container visible", async ({ page }) => {
     // Given
-    const sheetsContainer: Locator = page.locator("#sheets-container");
+    const sheetsContainer: Locator = page.locator("#sheet1-container");
 
     // Then
     await expect(sheetsContainer).toBeVisible();
