@@ -29,8 +29,6 @@ test.describe("Sheets Navigator", () => {
     await sheet2Tab.click();
 
     // Then
-    expect(await page.locator("#sheets-container").textContent()).toContain(
-      "Sheet2"
-    );
+    expect(await page.locator("#sheet2-container").isVisible()).toBeTruthy();
   });
 });
