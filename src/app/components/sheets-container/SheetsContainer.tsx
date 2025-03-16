@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { IRootState } from "../state/store";
-import Sheet from "../types/Sheet";
+import { IRootState } from "../../state/store";
+import Sheet from "../../types/Sheet";
 
 function SheetsContainer() {
   const sheet: Sheet = useSelector(
