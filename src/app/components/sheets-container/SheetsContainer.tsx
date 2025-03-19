@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { IRootState } from "../../state/store";
 import Sheet from "../../types/Sheet";
+import SheetsCell from "./SheetsCell";
 
 function SheetsContainer() {
   const sheet: Sheet = useSelector(
@@ -14,9 +15,7 @@ function SheetsContainer() {
       {sheet.rows.map((row, rowIndex) => (
         <div key={rowIndex} className="flex">
           {row.cells.map((cell, cellIndex) => (
-            <div key={cellIndex} className="border p-2">
-              {cell.value}
-            </div>
+            <SheetsCell key={cellIndex} value={cell.value} />
           ))}
         </div>
       ))}
