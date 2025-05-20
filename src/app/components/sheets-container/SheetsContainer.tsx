@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { IRootState } from "../../state/store";
 import Sheet from "../../types/Sheet";
-import SheetsCell from "./SheetsCell";
+import SheetsRow from "./SheetsRow";
 
 function SheetsContainer() {
   const sheet: Sheet = useSelector(
@@ -13,11 +13,7 @@ function SheetsContainer() {
       className="border flex-grow overflow-auto"
     >
       {sheet.rows.map((row, rowIndex) => (
-        <div key={rowIndex} className="flex">
-          {row.cells.map((cell, cellIndex) => (
-            <SheetsCell key={cellIndex} value={cell.value} />
-          ))}
-        </div>
+        <SheetsRow key={rowIndex} row={row} />
       ))}
     </div>
   );
