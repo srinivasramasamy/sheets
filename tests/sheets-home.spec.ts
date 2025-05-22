@@ -50,4 +50,12 @@ test.describe("Sheets Home", () => {
     // Then
     await expect(defaultTab).toBeVisible();
   });
+
+  test("should have column headers", async ({ page }) => {
+    // When
+    const columnHeaders: Locator = page.locator("#column-headers");
+
+    // Then
+    await expect(columnHeaders).toBeVisible();
+  });
 });
