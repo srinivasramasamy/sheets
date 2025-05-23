@@ -13,3 +13,9 @@ export const columnHeaders = (length: number): string[] => {
     .fill(null)
     .map((_, index: number) => columnHeader(index));
 };
+
+export const rowHeaders = (length: number): string[] => {
+  return new Array(length)
+    .fill(null)
+    .map((_, index: number) => (index + 1).toString());
+};
