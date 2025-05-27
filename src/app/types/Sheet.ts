@@ -10,6 +10,8 @@ export default class Sheet {
     this.name = name;
     this.noOfColumns = noOfColumns;
     this.noOfRows = noOfRows;
-    this.rows = new Array(noOfRows).fill(null).map(() => new Row(noOfColumns));
+    this.rows = new Array(noOfRows)
+      .fill(null)
+      .map((_, rowIndex) => new Row(rowIndex, noOfColumns));
   }
 }
