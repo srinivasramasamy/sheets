@@ -8,8 +8,8 @@ interface IProps {
 function SheetsRow({ row }: IProps) {
   return (
     <div className="flex">
-      {row.cells.map((cell, cellIndex) => (
-        <SheetsCell key={cellIndex} value={cell.value} />
+      {row.cells.map((cell) => (
+        <SheetsCell key={cell.columnIndex} cell={cell} />
       ))}
     </div>
   );

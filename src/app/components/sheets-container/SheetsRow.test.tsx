@@ -5,7 +5,7 @@ import SheetsRow from "./SheetsRow";
 describe("SheetsRow", () => {
   it("should render the row with cells", () => {
     // Given
-    const cell = new Cell("A1");
+    const cell = new Cell(0, 0, false, "A1");
     const row = {
       cells: [cell],
     };
@@ -19,8 +19,8 @@ describe("SheetsRow", () => {
 
   it("should render the row with multiple cells", () => {
     // Given
-    const cell1 = new Cell("A1");
-    const cell2 = new Cell("B1");
+    const cell1 = new Cell(0, 0, false, "A1");
+    const cell2 = new Cell(0, 1, false, "B1");
     const row = {
       cells: [cell1, cell2],
     };
@@ -35,7 +35,7 @@ describe("SheetsRow", () => {
 
   it("should render the row with empty cells", () => {
     // Given
-    const cell1 = new Cell("");
+    const cell1 = new Cell(0, 0, false, "");
     const row = {
       cells: [cell1],
     };

@@ -1,10 +1,14 @@
+import Cell from "@/app/types/Cell";
+
 interface IProps {
-  value: string;
+  cell: Cell;
 }
 
-function SheetsCell({ value }: IProps) {
+function SheetsCell({ cell }: IProps) {
   return (
-    <div className="border p-2 w-20 h-7 flex-grow-0 flex-shrink-0">{value}</div>
+    <div className="border p-2 w-20 h-7 flex-grow-0 flex-shrink-0">
+      {cell.value}
+    </div>
   );
 }
 
